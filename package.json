@@ -1,11 +1,8 @@
 {
   "name": "modu-packages",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
