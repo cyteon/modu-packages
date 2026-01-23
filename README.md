@@ -2,7 +2,7 @@
 
 The code for the modu packages website and the backend modu interacts with. \
 Packages can be stored with any S3-supported storage method, personally I use minio. \
-For docs on how to use libraries in modu check [the docs](https://modu.cyteon.dev/modu/docs/libraries)
+For docs on how to use libraries in modu check [the docs](https://modu.cyteon.dev/docs/libraries)
 
 Modu: https://github.com/Cyteon/modu
 
