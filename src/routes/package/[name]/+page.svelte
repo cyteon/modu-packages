@@ -43,26 +43,26 @@
     {#if error}
         <div class="m-auto text-center">
             <h1 class="text-4xl font-bold">An error occurred</h1>
-            <p class="text-xl text-ctp-red">{error}</p>
+            <p class="text-xl text-red">{error}</p>
         </div>
     {:else}
         <div class="flex flex-col px-2 mx-auto w-full md:w-1/2 mt-16 mb-4">
             <div>
                 <div class="flex">
                     <h1 class="text-4xl font-bold">{data.props.name}</h1>
-                    <p class="text-ctp-subtext0 ml-auto text-xl">v{pkg.version}</p>
+                    <p class="text-fg2 ml-auto text-xl">v{pkg.version}</p>
                 </div>
                 <p class="text-lg">{pkg.description}</p>
-                <p class="text-ctp-subtext0 mt-2">{pkg.downloadCount} downloads</p>
+                <p class="text-fg2 mt-2">{pkg.downloadCount} downloads</p>
 
                 <div class="flex">
-                    <p class="text-lg">Made by <a href={`https://github.com/${pkg.username}`} class="text-ctp-blue hover:underline">{pkg.username}</a></p>
-                    <a href={pkg.zipUrl} target="_blank" rel="noopener noreferrer" class="ml-auto text-ctp-blue hover:underline">Download ZIP</a>
+                    <p class="text-lg">Made by <a href={`https://github.com/${pkg.username}`} class="text-blue hover:underline">{pkg.username}</a></p>
+                    <a href={pkg.zipUrl} target="_blank" rel="noopener noreferrer" class="ml-auto text-blue hover:underline">Download ZIP</a>
                 </div>
             </div>
-            <code class="bg-ctp-mantle rounded-md p-4 mt-4">modu install {data.props.name}@{pkg.version}</code>
-            <div class="bg-ctp-mantle rounded-md mt-4 p-4">
-                <p class="text-lg prose">{@html pkg.readme}</p>
+            <code class="bg-bg1 border border-bg2 rounded-md p-4 mt-4">modu install {data.props.name}@{pkg.version}</code>
+            <div class="bg-bg1 border border-bg2 rounded-md mt-4 p-4">
+                <p class="text-lg prose max-w-none">{@html pkg.readme}</p>
             </div>
         </div>
     {/if}

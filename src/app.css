@@ -3,11 +3,15 @@
 @import "tailwindcss/utilities";
 
 body {
-  @apply bg-ctp-base text-ctp-text;
+  @apply bg-bg text-fg0;
+}
+
+* {
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 }
 
 .a-btn {
-  @apply bg-ctp-yellow text-ctp-crust;
+  @apply bg-yellow text-bg;
 }
 
 input {
@@ -15,7 +19,7 @@ input {
   padding: 0.4em 0.8em;
   width: 100%;
 
-  @apply bg-ctp-crust;
+  @apply bg-bg1;
 }
 
 input:focus-visible {

@@ -45,15 +45,15 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-4 px-2 md:px-8 lg:px-12 xl:px-64 w-full mb-4">
             {#each topPackages as pkg}
-                <a class="bg-ctp-mantle rounded-md p-4 border border-ctp-mantle hover:border-ctp-surface0 transition-all duration-300" href={`/package/${pkg.name}`}>
+                <a class="bg-bg0_h rounded-md p-4 border border-bg1 hover:border-bg2  flex flex-col" href={`/package/${pkg.name}`}>
                     <div class="flex">
                         <h1 class="text-xl font-semibold">{pkg.name}</h1>
-                        <p class="ml-auto text-ctp-subtext0">v{pkg.latestVersion}</p>
+                        <p class="ml-auto text-fg2">v{pkg.latestVersion}</p>
                     </div>
-                    <p class="text-lg">{pkg.description}</p>
-                    <div class="flex">
-                        <p class="mt-2 text-ctp-subtext0">{pkg.downloadCount} downloads</p>
-                        <p class="mt-2 ml-auto text-ctp-subtext0">By {pkg.username}</p>
+                    <p class="text-lg">{pkg.description || "no description"}</p>
+                    <div class="flex mt-auto">
+                        <p class="mt-2 text-fg2">{pkg.downloadCount} downloads</p>
+                        <p class="mt-2 ml-auto text-fg2">By {pkg.username}</p>
                     </div>
                 </a>
             {/each}
