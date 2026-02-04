@@ -15,11 +15,14 @@ export async function GET({ params, url }) {
 
   const { name, version } = params;
   let release;
-
-  if (version === "latest") {
-    release = await Release.findOne({ packageName: name }).sort({
+  let allReleases = await Release.find({ packageName: name }).sort({
       version: -1,
     });
+
+  if (version === "latest") {
+    if (allReleases.length > 0) {
+      release = allReleases[0];
+    }
   }
 
   if (!release) {
@@ -38,16 +41,18 @@ export async function GET({ params, url }) {
     Promise.all([updateStats(pkg, release)]);
   }
 
-  const { zipUrl, readme, description } = release;
+  const { zipUrl, readme, description, createdAt } = release;
 
   return new Response(
     JSON.stringify({
       zipUrl,
       readme,
       description,
+      createdAt,
       version: release.version,
       downloadCount: pkg.downloadCount,
       ownerId: pkg.ownerId,
+      allReleases,
     }),
   );
 }
