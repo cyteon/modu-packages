@@ -96,7 +96,7 @@
             </div>
             
             <div class="flex flex-col md:flex-row mt-4 md:space-x-4">
-                <div class="flex flex-col w-full">
+                <div class="flex flex-col w-full md:w-2/3">
                     <div class="bg-bg1 border border-bg2 rounded-md p-4">
                         <p class="text-lg prose max-w-none">{@html pkg.readme}</p>
                     </div>
