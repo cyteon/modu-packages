@@ -41,7 +41,7 @@ export async function GET({ params, url }) {
     Promise.all([updateStats(pkg, release)]);
   }
 
-  const { zipUrl, readme, description, createdAt } = release;
+  const { zipUrl, readme, description, createdAt, downloadCount } = release;
 
   return new Response(
     JSON.stringify({
@@ -50,7 +50,7 @@ export async function GET({ params, url }) {
       description,
       createdAt,
       version: release.version,
-      downloadCount: pkg.downloadCount,
+      downloadCount,
       ownerId: pkg.ownerId,
       allReleases,
     }),

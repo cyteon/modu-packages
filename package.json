@@ -15,7 +15,7 @@
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^4.0.0",
     "@types/node": "^25.1.0",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.27",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
     "tailwindcss": "^3.4.9",
@@ -23,14 +23,14 @@
     "vite": "^5.4.11"
   },
   "dependencies": {
-    "@sveltejs/adapter-node": "^5.5.2",
+    "@sveltejs/adapter-node": "^5.5.4",
     "@tailwindcss/typography": "^0.5.15",
-    "dexie": "^4.0.10",
-    "dompurify": "^3.2.3",
+    "dexie": "^4.4.1",
+    "dompurify": "^3.3.3",
     "lucide-svelte": "^0.563.0",
-    "marked": "^17.0.1",
+    "marked": "^17.0.5",
     "minio": "^7.1.2",
-    "mongoose": "^9.1.5",
+    "mongoose": "^9.3.2",
     "typescript-cookie": "^1.0.6"
   }
 }
