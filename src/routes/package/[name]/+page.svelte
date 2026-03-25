@@ -89,7 +89,7 @@
             <p class="text-xl text-red">{error}</p>
         </div>
     {:else}
-        <div class="flex flex-col w-full md:w-2/3 mx-auto mt-16 mb-4 px-2">
+        <div class="flex flex-col w-full md:w-3/4 mx-auto mt-16 mb-4 px-2">
             <div>
                 <h1 class="text-4xl font-bold">{packageName}</h1>
                 <p class="text-fg2 mt-2">{pkg.version} • Updated {timeSince(new Date(pkg.createdAt).getTime())} • {pkg.downloadCount} downloads</p>
